@@ -3,6 +3,7 @@ import { Fraunces } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "@/components/LenisProvider";
 import Nav from "@/components/Nav";
+import Analytics from "@/components/Analytics";
 
 const fraunces = Fraunces({ 
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="ru">
       <body className={`${fraunces.className} bg-linen-canvas text-ink-black antialiased overflow-x-hidden selection:bg-stone/20 selection:text-ink-black`}>
         <LenisProvider>
+          <Analytics />
           <Nav />
           {children}
         </LenisProvider>

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { trackEvent } from "@/components/Analytics";
 
 export default function Contact() {
   return (
@@ -26,6 +27,7 @@ export default function Contact() {
         {/* Primary Filled Button (как в референсе) */}
         <motion.a
           href="mailto:hello@example.com"
+          onClick={() => trackEvent("cta_click", { method: "email" })}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -42,13 +44,13 @@ export default function Contact() {
           </p>
           
           <div className="flex items-center gap-6 text-[14px] font-medium">
-            <a href="#" className="text-stone hover:text-ink-black transition-colors">
+            <a href="#" onClick={() => trackEvent("social_click", { network: "instagram" })} className="text-stone hover:text-ink-black transition-colors">
               Instagram
             </a>
-            <a href="#" className="text-stone hover:text-ink-black transition-colors">
+            <a href="#" onClick={() => trackEvent("social_click", { network: "twitter" })} className="text-stone hover:text-ink-black transition-colors">
               Twitter
             </a>
-            <a href="#" className="text-stone hover:text-ink-black transition-colors">
+            <a href="mailto:hello@example.com" onClick={() => trackEvent("social_click", { network: "email" })} className="text-stone hover:text-ink-black transition-colors">
               Email
             </a>
           </div>
