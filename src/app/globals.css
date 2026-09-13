@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-linen-canvas: #f7f5f3;
+  --color-ink-black: #0d0d0d;
+  --color-paper-white: #ffffff;
+  --color-stone: #6e6a69;
+  --color-pebble: #9a9796;
+
+  /* Typography */
+  --font-cosmosoracle: 'Fraunces', ui-serif, Georgia, serif;
+
+  /* Spacing */
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  --spacing-48: 48px;
+  --spacing-72: 72px;
+  --spacing-200: 200px;
+
+  /* Border Radius */
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+}
+
+@layer base {
+  :root {
+    --background: #f7f5f3;
+    --foreground: #0d0d0d;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-cosmosoracle);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom Scrollbar (Light Theme) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f7f5f3;
+}
+::-webkit-scrollbar-thumb {
+  background: #dcdad8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c2c0bf;
+}
+
+/* Lenis */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
