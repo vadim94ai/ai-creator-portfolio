@@ -10,7 +10,7 @@ declare global {
 }
 
 export const GA_MEASUREMENT_ID = "G-XXXXXXXXXX"; // ЗАМЕНИТЕ НА ВАШ GA4 ID
-export const YM_COUNTER_ID = 00000000; // ЗАМЕНИТЕ НА ВАШ ID ЯНДЕКС.МЕТРИКИ
+export const YM_COUNTER_ID = 12345678; // ЗАМЕНИТЕ НА ВАШ ID ЯНДЕКС.МЕТРИКИ
 
 export default function Analytics() {
   return (
