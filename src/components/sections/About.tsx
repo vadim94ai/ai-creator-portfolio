@@ -55,27 +55,16 @@ export default function About() {
   return (
     <section className="relative w-full py-24 md:py-32 px-4 bg-linen-canvas overflow-hidden flex flex-col items-center">
       <div className="max-w-[1280px] w-full mx-auto">
-        {/* Editorial Text Reveal */}
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1, ease: [0.25, 1, 0.5, 1] }}
+          transition={{ duration: 1.2, ease: [0.25, 1, 0.5, 1] }}
           className="mb-24 max-w-4xl"
         >
           <h2 className="text-[15px] text-ink-black font-medium tracking-normal uppercase mb-8">Обо мне</h2>
-          <p className="text-[33px] md:text-[38px] font-light text-ink-black leading-[1.1] tracking-[-0.02em] flex flex-wrap gap-x-2 gap-y-1">
-            {words.map((word, i) => (
-              <motion.span
-                key={i}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8, delay: i * 0.03, ease: [0.25, 1, 0.5, 1] }}
-              >
-                {word}
-              </motion.span>
-            ))}
+          <p className="text-[33px] md:text-[38px] font-light text-ink-black leading-[1.2] tracking-[-0.02em]">
+            Я создаю визуальные миры на стыке искусства и технологий. Используя генеративные сети, я помогаю брендам говорить на языке будущего.
           </p>
         </motion.div>
 

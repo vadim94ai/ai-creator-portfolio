@@ -12,6 +12,7 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://cosmos-creator.vercel.app'),
   title: "Cosmos | Gallery wall for visual discovery",
   description: "Портфолио ИИ-креатора. Генеративный арт, видео и визуальные исследования.",
   openGraph: {

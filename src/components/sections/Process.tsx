@@ -36,7 +36,7 @@ export default function Process() {
               key={index} 
               className="p-8 rounded-2xl bg-paper-white flex flex-col gap-6"
             >
-              <span className="text-[48px] font-light text-stone/30 leading-none">
+              <span className="text-[48px] font-light text-stone/20 leading-none">
                 {step.num}
               </span>
               <div>
@@ -63,7 +63,7 @@ export default function Process() {
                 className="w-[100vw] max-w-[800px] flex-shrink-0 relative"
               >
                 <div className="p-16 rounded-2xl bg-paper-white h-[400px] flex flex-col justify-between">
-                  <span className="text-[58px] font-light text-stone/30 leading-none">
+                  <span className="text-[58px] font-light text-stone/20 leading-none">
                     {step.num}
                   </span>
                   <div>

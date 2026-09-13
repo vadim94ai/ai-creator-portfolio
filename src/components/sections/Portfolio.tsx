@@ -66,12 +66,12 @@ function VideoContainer({ project, index }: { project: typeof projects[0]; index
         loop
         playsInline
         poster={project.poster}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s] ease-out"
         src={project.videoSrc}
       />
       
       {/* Тёмный оверлей */}
-      <div className={`absolute inset-0 bg-black/30 md:bg-black/20 transition-colors duration-700 ${isPlaying ? 'md:bg-black/10 bg-black/10' : ''}`} />
+      <div className={`absolute inset-0 bg-black/30 md:bg-black/20 transition-colors duration-700 pointer-events-none ${isPlaying ? 'md:bg-black/10 bg-black/10' : ''}`} />
 
       {/* 9-dot cluster */}
       <div className={`absolute inset-0 flex items-center justify-center opacity-80 transition-opacity duration-500 ${isPlaying ? 'opacity-0' : 'opacity-100'}`}>

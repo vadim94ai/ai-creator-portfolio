@@ -50,9 +50,9 @@ export default function Hero() {
         </motion.span>
 
         <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.1, ease: [0.25, 1, 0.5, 1] }}
+          initial={{ opacity: 0, filter: "blur(10px)" }}
+          animate={{ opacity: 1, filter: "blur(0px)" }}
+          transition={{ duration: 1.5, delay: 0.1, ease: [0.25, 1, 0.5, 1] }}
           className="text-[44px] leading-[0.9] md:text-[74px] font-light text-ink-black md:leading-[0.8] tracking-[-0.05em] mb-8 md:mb-12"
         >
           Gallery wall for <br/> visual discovery
@@ -60,14 +60,14 @@ export default function Hero() {
 
         {/* Buttons */}
         <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.3, ease: [0.25, 1, 0.5, 1] }}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.4, ease: [0.25, 1, 0.5, 1] }}
           className="flex flex-col md:flex-row items-center gap-3 md:gap-4 w-full md:w-auto"
         >
           <a 
             href="#portfolio"
-            className="w-full md:w-auto px-8 py-4 bg-ink-black text-paper-white rounded-2xl font-medium text-[16px] hover:bg-stone transition-colors duration-300 text-center"
+            className="w-full md:w-auto px-10 py-5 bg-ink-black text-paper-white rounded-2xl font-medium text-[15px] hover:bg-stone hover:scale-[0.98] active:scale-[0.95] transition-all duration-500 text-center"
           >
             Смотреть работы
           </a>
