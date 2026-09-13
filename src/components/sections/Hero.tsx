@@ -10,7 +10,6 @@ export default function Hero() {
     offset: ["start start", "end start"]
   });
 
-  // Мягкий параллакс для "полароидов"
   const y1 = useTransform(scrollYProgress, [0, 1], [0, -100]);
   const y2 = useTransform(scrollYProgress, [0, 1], [0, -200]);
   const y3 = useTransform(scrollYProgress, [0, 1], [0, -50]);
@@ -22,20 +21,21 @@ export default function Hero() {
       className="relative w-full h-[100svh] flex flex-col items-center justify-center overflow-hidden bg-linen-canvas"
     >
       {/* Floating Image Tiles (Полароиды) */}
-      <motion.div style={{ y: y1 }} className="absolute top-[15%] left-[10%] w-[120px] md:w-[180px] aspect-[3/4] rounded-xl overflow-hidden rotate-[-4deg]">
-        <video autoPlay muted loop playsInline className="w-full h-full object-cover" src="https://videos.pexels.com/video-files/3129957/3129957-uhd_2560_1440_25fps.mp4" />
+      <motion.div style={{ y: y1 }} className="absolute top-[10%] left-[5%] md:top-[15%] md:left-[10%] w-[90px] md:w-[180px] aspect-[3/4] rounded-xl overflow-hidden rotate-[-4deg]">
+        <video autoPlay muted loop playsInline poster="https://images.pexels.com/photos/3129957/pexels-photo-3129957.jpeg?auto=compress&cs=tinysrgb&w=400" className="w-full h-full object-cover" src="https://videos.pexels.com/video-files/3129957/3129957-uhd_2560_1440_25fps.mp4" />
       </motion.div>
       
-      <motion.div style={{ y: y2 }} className="absolute top-[20%] right-[12%] w-[100px] md:w-[140px] aspect-square rounded-xl overflow-hidden rotate-[3deg]">
-        <video autoPlay muted loop playsInline className="w-full h-full object-cover" src="https://videos.pexels.com/video-files/853889/853889-hd_1920_1080_25fps.mp4" />
+      {/* Скрываем часть видео на мобильных для экономии трафика и места */}
+      <motion.div style={{ y: y2 }} className="hidden md:block absolute top-[20%] right-[12%] w-[140px] aspect-square rounded-xl overflow-hidden rotate-[3deg]">
+        <video autoPlay muted loop playsInline poster="https://images.pexels.com/photos/853889/pexels-photo-853889.jpeg?auto=compress&cs=tinysrgb&w=400" className="w-full h-full object-cover" src="https://videos.pexels.com/video-files/853889/853889-hd_1920_1080_25fps.mp4" />
       </motion.div>
       
-      <motion.div style={{ y: y3 }} className="absolute bottom-[20%] left-[15%] w-[140px] md:w-[200px] aspect-video rounded-xl overflow-hidden rotate-[2deg]">
-        <video autoPlay muted loop playsInline className="w-full h-full object-cover" src="https://videos.pexels.com/video-files/3163534/3163534-uhd_2560_1440_30fps.mp4" />
+      <motion.div style={{ y: y3 }} className="absolute bottom-[10%] left-[5%] md:bottom-[20%] md:left-[15%] w-[110px] md:w-[200px] aspect-video rounded-xl overflow-hidden rotate-[2deg]">
+        <video autoPlay muted loop playsInline poster="https://images.pexels.com/photos/3163534/pexels-photo-3163534.jpeg?auto=compress&cs=tinysrgb&w=400" className="w-full h-full object-cover" src="https://videos.pexels.com/video-files/3163534/3163534-uhd_2560_1440_30fps.mp4" />
       </motion.div>
 
-      <motion.div style={{ y: y4 }} className="absolute bottom-[15%] right-[10%] w-[110px] md:w-[160px] aspect-[4/5] rounded-xl overflow-hidden rotate-[-2deg]">
-        <video autoPlay muted loop playsInline className="w-full h-full object-cover" src="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4" />
+      <motion.div style={{ y: y4 }} className="hidden md:block absolute bottom-[15%] right-[10%] w-[160px] aspect-[4/5] rounded-xl overflow-hidden rotate-[-2deg]">
+        <video autoPlay muted loop playsInline poster="https://images.pexels.com/photos/3129671/pexels-photo-3129671.jpeg?auto=compress&cs=tinysrgb&w=400" className="w-full h-full object-cover" src="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4" />
       </motion.div>
 
       {/* Center Copy */}
@@ -44,7 +44,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.25, 1, 0.5, 1] }}
-          className="text-[15px] font-medium tracking-normal text-ink-black uppercase mb-6"
+          className="text-[14px] md:text-[15px] font-medium tracking-normal text-ink-black uppercase mb-4 md:mb-6"
         >
           COSMOS
         </motion.span>
@@ -53,7 +53,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.1, ease: [0.25, 1, 0.5, 1] }}
-          className="text-[58px] md:text-[74px] font-light text-ink-black leading-[0.8] tracking-[-0.05em] mb-12"
+          className="text-[44px] leading-[0.9] md:text-[74px] font-light text-ink-black md:leading-[0.8] tracking-[-0.05em] mb-8 md:mb-12"
         >
           Gallery wall for <br/> visual discovery
         </motion.h1>
@@ -63,12 +63,12 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.3, ease: [0.25, 1, 0.5, 1] }}
-          className="flex items-center gap-4"
+          className="flex flex-col md:flex-row items-center gap-3 md:gap-4 w-full md:w-auto"
         >
-          <button className="px-6 py-4 bg-ink-black text-paper-white rounded-2xl font-medium text-[16px] hover:bg-stone transition-colors duration-300">
+          <button className="w-full md:w-auto px-6 py-4 bg-ink-black text-paper-white rounded-2xl font-medium text-[16px] hover:bg-stone transition-colors duration-300">
             Sign up
           </button>
-          <button className="px-6 py-4 bg-paper-white text-ink-black rounded-2xl font-medium text-[16px] border border-ink-black/15 hover:border-ink-black/30 transition-colors duration-300">
+          <button className="w-full md:w-auto px-6 py-4 bg-paper-white text-ink-black rounded-2xl font-medium text-[16px] border border-ink-black/15 hover:border-ink-black/30 transition-colors duration-300">
             Login
           </button>
         </motion.div>
