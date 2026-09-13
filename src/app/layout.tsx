@@ -5,7 +5,7 @@ import LenisProvider from "@/components/LenisProvider";
 import Nav from "@/components/Nav";
 
 const fraunces = Fraunces({ 
-  subsets: ["latin", "cyrillic"],
+  subsets: ["latin"],
   weight: ["300", "400", "500"],
   display: 'swap',
 });

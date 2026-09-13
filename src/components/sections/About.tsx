@@ -40,7 +40,7 @@ function AnimatedNumber({ value }: { value: number }) {
   useEffect(() => {
     return springValue.on("change", (latest) => {
       if (ref.current) {
-        ref.current.textContent = Intl.NumberFormat("ru-RU").format(latest.toFixed(0));
+        ref.current.textContent = Intl.NumberFormat("ru-RU").format(Math.round(latest));
       }
     });
   }, [springValue]);
