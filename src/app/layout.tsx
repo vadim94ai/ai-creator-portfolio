@@ -12,8 +12,30 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Cosmos | Portfolio",
-  description: "Gallery wall for visual discovery.",
+  title: "Cosmos | Gallery wall for visual discovery",
+  description: "Портфолио ИИ-креатора. Генеративный арт, видео и визуальные исследования.",
+  openGraph: {
+    title: "Cosmos | AI Creator Portfolio",
+    description: "Портфолио ИИ-креатора. Генеративный арт, видео и визуальные исследования.",
+    url: 'https://cosmos-creator.vercel.app',
+    siteName: 'Cosmos',
+    images: [
+      {
+        url: '/og-image.jpg', // Плейсхолдер картинки 1200х630
+        width: 1200,
+        height: 630,
+        alt: 'Cosmos Portfolio',
+      },
+    ],
+    locale: 'ru_RU',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Cosmos | AI Creator Portfolio",
+    description: "Портфолио ИИ-креатора.",
+    images: ['/og-image.jpg'],
+  },
 };
 
 export default function RootLayout({
