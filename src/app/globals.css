@@ -9,7 +9,8 @@
   --color-pebble: #9a9796;
 
   /* Typography */
-  --font-cosmosoracle: 'Fraunces', ui-serif, Georgia, serif;
+  --font-sans: var(--font-manrope), sans-serif;
+  --font-serif: var(--font-cormorant), serif;
 
   /* Spacing */
   --spacing-4: 4px;
@@ -37,7 +38,7 @@
   body {
     background-color: var(--background);
     color: var(--foreground);
-    font-family: var(--font-cosmosoracle);
+    font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

@@ -1,14 +1,22 @@
 import type { Metadata } from "next";
-import { Fraunces } from "next/font/google";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "@/components/LenisProvider";
 import Nav from "@/components/Nav";
 import Analytics from "@/components/Analytics";
 
-const fraunces = Fraunces({ 
-  subsets: ["latin"],
-  weight: ["300", "400", "500"],
+const cormorant = Cormorant_Garamond({ 
+  subsets: ["cyrillic", "latin"],
+  weight: ["300", "400", "500", "600"],
   display: 'swap',
+  variable: '--font-cormorant',
+});
+
+const manrope = Manrope({
+  subsets: ["cyrillic", "latin"],
+  weight: ["300", "400", "500", "600"],
+  display: 'swap',
+  variable: '--font-manrope',
 });
 
 export const metadata: Metadata = {
@@ -46,7 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`${fraunces.className} bg-linen-canvas text-ink-black antialiased overflow-x-hidden selection:bg-stone/20 selection:text-ink-black`}>
+      <body className={`${manrope.className} ${cormorant.variable} ${manrope.variable} bg-linen-canvas text-ink-black antialiased overflow-x-hidden selection:bg-stone/20 selection:text-ink-black`}>
         <LenisProvider>
           <Analytics />
           <Nav />

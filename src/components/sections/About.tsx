@@ -63,7 +63,7 @@ export default function About() {
           className="mb-24 max-w-4xl"
         >
           <h2 className="text-[15px] text-ink-black font-medium tracking-normal uppercase mb-8">Обо мне</h2>
-          <p className="text-[33px] md:text-[38px] font-light text-ink-black leading-[1.2] tracking-[-0.02em]">
+          <p className="text-[33px] md:text-[38px] font-serif font-light text-ink-black leading-[1.2] tracking-[-0.02em]">
             Я создаю визуальные миры на стыке искусства и технологий. Используя генеративные сети, я помогаю брендам говорить на языке будущего.
           </p>
         </motion.div>

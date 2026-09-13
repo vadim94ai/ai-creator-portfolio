@@ -53,7 +53,7 @@ export default function Hero() {
           initial={{ opacity: 0, filter: "blur(10px)" }}
           animate={{ opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 1.5, delay: 0.1, ease: [0.25, 1, 0.5, 1] }}
-          className="text-[44px] leading-[0.9] md:text-[74px] font-light text-ink-black md:leading-[0.8] tracking-[-0.05em] mb-8 md:mb-12"
+          className="text-[44px] font-serif leading-[0.9] md:text-[74px] font-light text-ink-black md:leading-[0.8] tracking-[-0.05em] mb-8 md:mb-12"
         >
           Gallery wall for <br/> visual discovery
         </motion.h1>
@@ -67,7 +67,7 @@ export default function Hero() {
         >
           <a 
             href="#portfolio"
-            className="w-full md:w-auto px-10 py-5 bg-ink-black text-paper-white rounded-2xl font-medium text-[15px] hover:bg-stone hover:scale-[0.98] active:scale-[0.95] transition-all duration-500 text-center"
+            className="inline-flex items-center justify-center w-full md:w-auto px-10 py-5 bg-ink-black text-paper-white rounded-2xl font-medium text-[15px] hover:bg-stone hover:scale-[0.98] active:scale-[0.95] transition-all duration-500 text-center"
           >
             Смотреть работы
           </a>

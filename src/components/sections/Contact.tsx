@@ -15,7 +15,7 @@ export default function Contact() {
           transition={{ duration: 1, ease: [0.25, 1, 0.5, 1] }}
           className="max-w-3xl mb-16"
         >
-          <h2 className="text-[58px] md:text-[74px] font-light tracking-[-0.05em] text-ink-black mb-8 leading-[0.8]">
+          <h2 className="text-[58px] md:text-[74px] font-serif font-light tracking-[-0.05em] text-ink-black mb-8 leading-[0.8]">
             Let's build <br/>
             something beautiful
           </h2>
@@ -34,7 +34,7 @@ export default function Contact() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="px-8 py-4 bg-ink-black text-paper-white rounded-2xl font-medium text-[16px] hover:bg-stone transition-colors duration-300 mb-32"
+          className="inline-flex items-center justify-center px-10 py-5 bg-ink-black text-paper-white rounded-2xl font-medium text-[16px] hover:bg-stone transition-colors duration-300 mb-32"
         >
           Написать в Telegram
         </motion.a>
