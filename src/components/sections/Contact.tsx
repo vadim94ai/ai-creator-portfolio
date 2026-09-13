@@ -5,7 +5,7 @@ import { trackEvent } from "@/components/Analytics";
 
 export default function Contact() {
   return (
-    <section className="relative w-full pt-24 md:pt-32 pb-16 px-4 bg-linen-canvas flex flex-col items-center">
+    <section id="contact" className="relative w-full pt-24 md:pt-32 pb-16 px-4 bg-linen-canvas flex flex-col items-center">
       <div className="max-w-[1280px] w-full mx-auto relative z-10 flex flex-col items-center text-center">
         
         <motion.div
@@ -20,21 +20,23 @@ export default function Contact() {
             something beautiful
           </h2>
           <p className="text-[18px] text-stone">
-            Готов обсудить ваш следующий проект. Отправьте мне письмо.
+            Готов обсудить ваш следующий проект. Напишите мне.
           </p>
         </motion.div>
 
-        {/* Primary Filled Button (как в референсе) */}
+        {/* Primary Filled Button */}
         <motion.a
-          href="mailto:hello@example.com"
-          onClick={() => trackEvent("cta_click", { method: "email" })}
+          href="https://t.me/VAD1MSP"
+          target="_blank" 
+          rel="noopener noreferrer"
+          onClick={() => trackEvent("cta_click", { method: "telegram" })}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="px-6 py-4 bg-ink-black text-paper-white rounded-2xl font-medium text-[16px] hover:bg-stone transition-colors duration-300 mb-32"
+          className="px-8 py-4 bg-ink-black text-paper-white rounded-2xl font-medium text-[16px] hover:bg-stone transition-colors duration-300 mb-32"
         >
-          Start a project
+          Написать в Telegram
         </motion.a>
 
         {/* Footer */}
@@ -44,11 +46,11 @@ export default function Contact() {
           </p>
           
           <div className="flex items-center gap-6 text-[14px] font-medium">
-            <a href="#" onClick={() => trackEvent("social_click", { network: "instagram" })} className="text-stone hover:text-ink-black transition-colors">
+            <a href="https://www.instagram.com/vadim__spirin/" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("social_click", { network: "instagram" })} className="text-stone hover:text-ink-black transition-colors">
               Instagram
             </a>
-            <a href="#" onClick={() => trackEvent("social_click", { network: "twitter" })} className="text-stone hover:text-ink-black transition-colors">
-              Twitter
+            <a href="https://t.me/VAD1MSP" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("social_click", { network: "telegram" })} className="text-stone hover:text-ink-black transition-colors">
+              Telegram
             </a>
             <a href="mailto:hello@example.com" onClick={() => trackEvent("social_click", { network: "email" })} className="text-stone hover:text-ink-black transition-colors">
               Email

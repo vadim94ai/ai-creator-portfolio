@@ -104,7 +104,7 @@ function VideoContainer({ project, index }: { project: typeof projects[0]; index
 
 export default function Portfolio() {
   return (
-    <section className="w-full pb-8 md:pb-16 px-4 bg-linen-canvas">
+    <section id="portfolio" className="w-full pb-8 md:pb-16 px-4 bg-linen-canvas">
       <div className="max-w-[1280px] w-full mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

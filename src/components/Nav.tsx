@@ -20,8 +20,9 @@ export default function Nav() {
         
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-6 text-[16px] font-medium text-stone">
-          <a href="#" className="hover:text-ink-black transition-colors">Projects</a>
-          <a href="#" className="hover:text-ink-black transition-colors">Process</a>
+          <a href="#portfolio" className="hover:text-ink-black transition-colors">Projects</a>
+          <a href="#process" className="hover:text-ink-black transition-colors">Process</a>
+          <a href="#contact" className="hover:text-ink-black transition-colors">Contact</a>
         </div>
 
         {/* Mobile Burger Toggle */}
@@ -44,9 +45,9 @@ export default function Nav() {
             exit={{ opacity: 0, y: -20 }}
             className="fixed inset-0 z-40 bg-linen-canvas/95 backdrop-blur-md flex flex-col items-center justify-center gap-8 md:hidden"
           >
-            <a href="#" onClick={() => setIsOpen(false)} className="text-3xl font-light text-ink-black">Projects</a>
-            <a href="#" onClick={() => setIsOpen(false)} className="text-3xl font-light text-ink-black">Process</a>
-            <a href="#" onClick={() => setIsOpen(false)} className="text-3xl font-light text-ink-black">Contact</a>
+            <a href="#portfolio" onClick={() => setIsOpen(false)} className="text-3xl font-light text-ink-black">Projects</a>
+            <a href="#process" onClick={() => setIsOpen(false)} className="text-3xl font-light text-ink-black">Process</a>
+            <a href="#contact" onClick={() => setIsOpen(false)} className="text-3xl font-light text-ink-black">Contact</a>
           </motion.div>
         )}
       </AnimatePresence>

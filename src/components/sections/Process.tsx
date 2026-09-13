@@ -20,7 +20,7 @@ export default function Process() {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75%"]);
 
   return (
-    <section className="bg-linen-canvas w-full">
+    <section id="process" className="bg-linen-canvas w-full">
       {/* MOBILE LAYOUT (Vertical) */}
       <div className="md:hidden py-16 px-4">
         <h2 className="text-[14px] font-medium uppercase text-ink-black mb-4">Как я работаю</h2>

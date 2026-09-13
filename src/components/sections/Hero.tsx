@@ -65,12 +65,12 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.3, ease: [0.25, 1, 0.5, 1] }}
           className="flex flex-col md:flex-row items-center gap-3 md:gap-4 w-full md:w-auto"
         >
-          <button className="w-full md:w-auto px-6 py-4 bg-ink-black text-paper-white rounded-2xl font-medium text-[16px] hover:bg-stone transition-colors duration-300">
-            Sign up
-          </button>
-          <button className="w-full md:w-auto px-6 py-4 bg-paper-white text-ink-black rounded-2xl font-medium text-[16px] border border-ink-black/15 hover:border-ink-black/30 transition-colors duration-300">
-            Login
-          </button>
+          <a 
+            href="#portfolio"
+            className="w-full md:w-auto px-8 py-4 bg-ink-black text-paper-white rounded-2xl font-medium text-[16px] hover:bg-stone transition-colors duration-300 text-center"
+          >
+            Смотреть работы
+          </a>
         </motion.div>
       </div>
     </section>
