@@ -8,8 +8,8 @@ export default function Nav() {
 
   return (
     <>
-      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-paper-white px-6 py-3 rounded-full flex items-center justify-between gap-8 border border-ink-black/10 w-[90%] md:w-auto max-w-md shadow-sm">
-        <div className="flex items-center gap-1 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-paper-white px-6 py-3 rounded-full flex items-center justify-between gap-8 border border-ink-black/10 w-[90%] md:w-auto max-w-md">
+        <div className="flex items-center gap-1 group cursor-pointer p-2 -ml-2" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           {/* Dot Cluster Logo */}
           <div className="grid grid-cols-3 gap-0.5 w-[18px] h-[18px] group-hover:rotate-90 transition-transform duration-700 ease-in-out">
             {[...Array(9)].map((_, i) => (
@@ -20,19 +20,20 @@ export default function Nav() {
         
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-6 text-[15px] font-medium text-stone">
-          <a href="#portfolio" className="hover:text-ink-black transition-colors duration-300">Projects</a>
-          <a href="#process" className="hover:text-ink-black transition-colors duration-300">Process</a>
-          <a href="#contact" className="hover:text-ink-black transition-colors duration-300">Contact</a>
+          <a href="#portfolio" className="hover:text-ink-black transition-colors duration-300 py-2">Projects</a>
+          <a href="#process" className="hover:text-ink-black transition-colors duration-300 py-2">Process</a>
+          <a href="#contact" className="hover:text-ink-black transition-colors duration-300 py-2">Contact</a>
         </div>
 
         {/* Mobile Burger Toggle */}
         <button 
-          className="md:hidden flex flex-col justify-center items-center gap-1 w-6 h-6"
+          className="md:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 -mr-2"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
         >
-          <span className={`block w-5 h-0.5 bg-ink-black transition-transform ${isOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
+          <span className={`block w-5 h-0.5 bg-ink-black transition-transform ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
           <span className={`block w-5 h-0.5 bg-ink-black transition-opacity ${isOpen ? 'opacity-0' : ''}`} />
-          <span className={`block w-5 h-0.5 bg-ink-black transition-transform ${isOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
+          <span className={`block w-5 h-0.5 bg-ink-black transition-transform ${isOpen ? '-rotate-45 -translate-y-2' : ''}`} />
         </button>
       </nav>
 
